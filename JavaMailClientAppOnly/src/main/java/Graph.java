@@ -128,6 +128,7 @@ public class Graph {
 	    
 	    User user = _appClient.users(Graph.getUserId(properties))
 	    			.buildRequest()
+	    			.select("displayName,mail,userPrincipalName")
 	    			.get();
 	    
 	    return user;
